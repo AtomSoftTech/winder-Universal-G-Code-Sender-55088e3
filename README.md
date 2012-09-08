@@ -5,7 +5,10 @@ Additions/Modifications:<BR>
 -Added Go Home Button<BR>
 -Added Spindle Control Button<BR>
 
-![New Buttons](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/touch_spindle.png "Image of new Buttons.")
+![Connect](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/connect_tab.png "Connect Tab")
+![Command](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/command_mode.png "Command Mode")
+![File](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/file_tab.png "File Mode")
+![Manual](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/manual.png "Manual Tab")
 ****************************************************************************************************************************
 Universal GcodeSender is a cross platform port of Otto Hermansson GcodeSender.
 
