@@ -2,8 +2,10 @@ Thanks.. Original Readme below *** below... Modded by AtomSoftTech.com
 
 Additions/Modifications:
 -Added Set Home Button
+-Added Go Home Button
 -Added Spindle Control Button
 
+![New Buttons](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/touch_spindle.png "Image of new Buttons.")
 ****************************************************************************************************************************
 Universal GcodeSender is a cross platform port of Otto Hermansson GcodeSender.
 
