@@ -4,6 +4,7 @@ Additions/Modifications:<BR>
 -Added Set Home Button<BR>
 -Added Go Home Button<BR>
 -Added Spindle Control Button<BR>
+-Modified Appearance
 
 ![Connect](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/connect_tab.png "Connect Tab")
 ![Command](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/command_mode.png "Command Mode")
