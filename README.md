@@ -1,9 +1,9 @@
 Thanks.. Original Readme below *** below... Modded by AtomSoftTech.com
 
-Additions/Modifications:
--Added Set Home Button
--Added Go Home Button
--Added Spindle Control Button
+Additions/Modifications:<BR>
+-Added Set Home Button<BR>
+-Added Go Home Button<BR>
+-Added Spindle Control Button<BR>
 
 ![New Buttons](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/touch_spindle.png "Image of new Buttons.")
 ****************************************************************************************************************************
