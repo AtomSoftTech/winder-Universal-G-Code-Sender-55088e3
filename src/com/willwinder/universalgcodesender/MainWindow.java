@@ -181,8 +181,8 @@ implements SerialCommunicatorListener, KeyListener {
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(commandLabel)
-                        .add(0, 657, Short.MAX_VALUE))
-                    .add(commandTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 704, Short.MAX_VALUE))
+                        .add(0, 546, Short.MAX_VALUE))
+                    .add(commandTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -290,7 +290,7 @@ implements SerialCommunicatorListener, KeyListener {
                                         .add(durationLabel)
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                         .add(durationValueLabel)))
-                                .add(0, 284, Short.MAX_VALUE)))
+                                .add(0, 173, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
@@ -525,10 +525,10 @@ implements SerialCommunicatorListener, KeyListener {
                 .addContainerGap()
                 .add(sethomeBtn)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(btnSpin, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(btnSpin)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(gohomeBtn)
-                .add(24, 24, 24))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout jPanel4Layout = new org.jdesktop.layout.GroupLayout(jPanel4);
@@ -547,7 +547,7 @@ implements SerialCommunicatorListener, KeyListener {
                 .add(jPanel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -561,9 +561,9 @@ implements SerialCommunicatorListener, KeyListener {
                             .add(jPanel4Layout.createSequentialGroup()
                                 .add(5, 5, 5)
                                 .add(jLabel1)
-                                .add(0, 0, Short.MAX_VALUE))
+                                .add(0, 7, Short.MAX_VALUE))
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, stepSizeSpinner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(0, 17, Short.MAX_VALUE))
+                        .add(0, 10, Short.MAX_VALUE))
                     .add(jPanel4Layout.createSequentialGroup()
                         .add(jPanel4Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(jPanel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1072,7 +1072,7 @@ implements SerialCommunicatorListener, KeyListener {
     }
     
     private void sendGoHome() {
-        String command = "G28 X0 Y0 Z0";
+        String command = "G0 X0 Y0 Z0";
         this.commPort.queueStringForComm(command + "\n");
         
         sendSetHome();
