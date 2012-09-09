@@ -4,6 +4,7 @@ Additions/Modifications:<BR>
 -Added Set Home Button<BR>
 -Added Go Home Button<BR>
 -Added Spindle Control Button<BR>
+-Added Override Percent (%) option...
 -Modified Appearance
 
 ![Connect](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/connect_tab.png "Connect Tab")
