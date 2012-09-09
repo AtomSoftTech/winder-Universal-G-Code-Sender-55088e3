@@ -87,6 +87,7 @@ implements SerialCommunicatorListener, KeyListener {
         durationLabel = new javax.swing.JLabel();
         durationValueLabel = new javax.swing.JLabel();
         cancelButton = new javax.swing.JButton();
+        IsPercent = new javax.swing.JCheckBox();
         jPanel4 = new javax.swing.JPanel();
         stepSizeSpinner = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
@@ -348,6 +349,11 @@ implements SerialCommunicatorListener, KeyListener {
 
         overrideSpeedCheckBox.setText("Override speed");
         overrideSpeedCheckBox.setEnabled(false);
+        overrideSpeedCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                overrideSpeedCheckBoxActionPerformed(evt);
+            }
+        });
 
         overrideSpeedValueSpinner.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(60), Integer.valueOf(1), null, Integer.valueOf(1)));
         overrideSpeedValueSpinner.setEnabled(false);
@@ -372,6 +378,9 @@ implements SerialCommunicatorListener, KeyListener {
             }
         });
 
+        IsPercent.setText("%");
+        IsPercent.setEnabled(false);
+
         org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -389,16 +398,6 @@ implements SerialCommunicatorListener, KeyListener {
                             .add(jPanel2Layout.createSequentialGroup()
                                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jPanel2Layout.createSequentialGroup()
-                                        .add(sendButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 68, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                        .add(pauseButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                        .add(cancelButton)
-                                        .add(18, 18, 18)
-                                        .add(overrideSpeedValueSpinner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 59, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                        .add(overrideSpeedCheckBox))
-                                    .add(jPanel2Layout.createSequentialGroup()
                                         .add(6, 6, 6)
                                         .add(rowsLabel)
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -410,8 +409,20 @@ implements SerialCommunicatorListener, KeyListener {
                                         .add(44, 44, 44)
                                         .add(durationLabel)
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                        .add(durationValueLabel)))
-                                .add(0, 401, Short.MAX_VALUE)))
+                                        .add(durationValueLabel))
+                                    .add(jPanel2Layout.createSequentialGroup()
+                                        .add(sendButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 68, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(pauseButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(cancelButton)
+                                        .add(18, 18, 18)
+                                        .add(overrideSpeedValueSpinner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 59, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(IsPercent)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(overrideSpeedCheckBox)))
+                                .add(0, 364, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
@@ -427,10 +438,11 @@ implements SerialCommunicatorListener, KeyListener {
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(sendButton)
                     .add(pauseButton)
-                    .add(overrideSpeedCheckBox)
                     .add(overrideSpeedValueSpinner, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(cancelButton))
-                .add(14, 14, 14)
+                    .add(cancelButton)
+                    .add(IsPercent)
+                    .add(overrideSpeedCheckBox))
+                .add(10, 10, 10)
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                         .add(sentRowsLabel)
@@ -441,7 +453,7 @@ implements SerialCommunicatorListener, KeyListener {
                     .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                         .add(durationValueLabel)
                         .add(durationLabel)))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("File Mode", jPanel2);
@@ -957,6 +969,14 @@ implements SerialCommunicatorListener, KeyListener {
         this.commandNum = -1;
     }//GEN-LAST:event_commandTextFieldActionPerformed
 
+    private void overrideSpeedCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_overrideSpeedCheckBoxActionPerformed
+        if(this.overrideSpeedCheckBox.isSelected())
+            IsPercent.setEnabled(true);
+        else
+            IsPercent.setEnabled(false);
+        
+    }//GEN-LAST:event_overrideSpeedCheckBoxActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1356,6 +1376,7 @@ implements SerialCommunicatorListener, KeyListener {
     
     // Generated variables.
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox IsPercent;
     private javax.swing.JComboBox baudrateSelectionComboBox;
     private javax.swing.JButton browseButton;
     private javax.swing.JButton btnFHome;
