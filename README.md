@@ -8,7 +8,7 @@ Additions/Modifications:<BR>
 
 ![Connect](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/connect_tab.png "Connect Tab")
 ![Command](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/command_mode.png "Command Mode")
-![File](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/file_tab.png "File Mode")
+![File](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/sppedPer.png "File Mode")
 ![Manual](https://github.com/AtomSoftTech/winder-Universal-G-Code-Sender-55088e3/raw/master/pictures/manual.png "Manual Tab")
 ****************************************************************************************************************************
 Universal GcodeSender is a cross platform port of Otto Hermansson GcodeSender.

@@ -146,6 +146,27 @@ public class CommUtils {
         return returnString;
     }
     
+     static String overrideSpeedPercent(String command, Integer speed) {
+        String returnString = command;
+        String sub1 = "";
+        double newSpeed = 0.0;
+        double CurSpeed = 0.0;
+        // Check if command sets feed speed.
+        Pattern speedRegex = Pattern.compile("F[0-9.]+", Pattern.CASE_INSENSITIVE);
+        Matcher speedRegexMatcher = speedRegex.matcher(command);
+        if (speedRegexMatcher.find()){
+            int tStart = speedRegexMatcher.start() + 1;
+            int tEnd = speedRegexMatcher.end();
+            
+            sub1 = command.substring(tStart, tEnd);
+            CurSpeed = Double.parseDouble( sub1 );
+            newSpeed = ((double)speed / (double)100) * CurSpeed;
+            returnString = speedRegexMatcher.replaceAll("F" + Double.toString(newSpeed) +  ".0");
+        }
+
+        return returnString;
+    }
+    
     /**
      * Removes any comments within parentheses or beginning with a semi-colon.
      */

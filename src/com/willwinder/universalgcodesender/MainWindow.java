@@ -186,6 +186,7 @@ implements SerialCommunicatorListener, KeyListener {
         });
 
         lineBreakGroup.add(lineBreakRN);
+        lineBreakRN.setSelected(true);
         lineBreakRN.setText("\\r\\n");
         lineBreakRN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1207,7 +1208,8 @@ implements SerialCommunicatorListener, KeyListener {
     private int getSpeedOverrideValue() {
         int ret = -1;
         if (this.overrideSpeedCheckBox.isSelected()) {
-            ret = Integer.parseInt( this.overrideSpeedValueSpinner.getValue().toString() );
+            ret = (Integer)overrideSpeedValueSpinner.getValue();
+            //ret = Integer.parseInt( this.overrideSpeedValueSpinner.getValue().toString()); //OLD WAY
         }
         return ret;
     }
@@ -1342,7 +1344,12 @@ implements SerialCommunicatorListener, KeyListener {
 
         // Override feed speed
         if (overrideSpeed > 0) {
-            newCommand = CommUtils.overrideSpeed(command, this.getSpeedOverrideValue());
+            if(IsPercent.isSelected())
+            {
+                newCommand = CommUtils.overrideSpeedPercent(command, this.getSpeedOverrideValue());
+            } else {
+                newCommand = CommUtils.overrideSpeed(command, this.getSpeedOverrideValue());
+            }
         }
         
         // Return the post processed command.
